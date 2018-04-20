@@ -15,3 +15,11 @@ STransaction::STransaction(uint256_t dest, uint256_t recp, float amt, unsigned i
     this->index = index;
 }
 
+std::string STransaction::to_string(){
+    std::string ret = this->destAddr.str(16, 64);
+    ret += this->destAddr.str(16, 64);
+    ret += std::to_string(this->nTime);
+    ret += std::to_string(this->index);
+    return ret;
+}
+
