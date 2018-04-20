@@ -7,7 +7,7 @@ using namespace std;
 #include <iostream>
 #include <sstream>
 #include <cstdlib>
-#include "uint256_t/uint256_t.h"
+#include "../../uint256_t/uint256_t.h"
 class SBlock {
     public:
         
