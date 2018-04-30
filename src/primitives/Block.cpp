@@ -10,6 +10,7 @@ SBlock::SBlock(std::vector<int>& data, int prevHash){
     this->hash = 0;
     this->tx = data;
     this->prevHash = prevHash;
+    this.hashData();
 
     
 }
