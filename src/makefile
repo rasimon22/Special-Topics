@@ -1,4 +1,4 @@
-output: main.o Block.o STransaction.o
+output: main.o Block.o STransaction.o str-u256.o 
 	mpiCC main.o Block.o ../uint256_t/uint128_t.cpp ../uint256_t/uint256_t.cpp STransaction.o -o output
 main.o: main.cpp
 	mpiCC -c main.cpp -o main.o
@@ -6,6 +6,8 @@ Block.o: primitives/Block.cpp
 	mpiCC -c primitives/Block.cpp -o Block.o
 STransaction.o: primitives/STransaction.cpp
 	mpiCC -c primitives/STransaction.cpp -o STransaction.o
+str-u256.o: util/str-u256.cpp 
+	mpiCC -c util/str-u256.cpp
 clean: 
 	rm *.o
 	rm output
