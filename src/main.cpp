@@ -26,7 +26,6 @@ int main(int argc, char** argv){
     std::string output = std::string(trans->to_string());
     std::cout << output << std::endl;
     //outputting a standard hash
-    std::vector<unsigned char> hash(picosha2::k_digest_size);
     picosha2::hash256(output.begin(),output.end(),hash.begin(), hash.end());
     std::cout << picosha2::bytes_to_hex_string(hash.begin(), hash.end()) << std::endl;
 
