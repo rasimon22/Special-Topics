@@ -1,3 +1,5 @@
+#ifndef TYPECONV
+#define TYPECONV
 #include <string>
 #include <vector>
 #include "../primitives/picosha2.h"
@@ -20,3 +22,5 @@ unsigned long long hash_comp[4];
     }
     return out_hash;
 }
+
+#endif
