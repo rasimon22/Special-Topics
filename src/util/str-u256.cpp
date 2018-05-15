@@ -1,14 +1,4 @@
-#ifndef TYPECONV
-#define TYPECONV
-#include <string>
-#include <vector>
-#include "../primitives/picosha2.h"
-#include <iostream>
-#include <sstream>
-#include <cstdlib>
-#include "../../uint256_t/uint256_t.h"
-using namespace std;
-
+#include "str-u256.h"
 uint256_t str_to_uint256(std::string input_str) {
 unsigned long long hash_comp[4];
     //assign 64 bit components of 256 bit hash (unsigned long long)
@@ -23,4 +13,3 @@ unsigned long long hash_comp[4];
     return out_hash;
 }
 
-#endif
