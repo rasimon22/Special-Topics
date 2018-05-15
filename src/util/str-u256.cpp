@@ -18,6 +18,5 @@ unsigned long long hash_comp[4];
     for(int i = 0; i < 4; i++) {
         out_hash += uint256_t(hash_comp[i]) << (64*i);
     }
-    std::cout<< out_hash << std::endl;
     return out_hash;
 }
