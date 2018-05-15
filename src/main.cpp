@@ -16,6 +16,7 @@ int main(int argc, char** argv){
     vector<unsigned char> hash(picosha2::k_digest_size);
     picosha2::hash256(vec.begin(), vec.end(), hash.begin(), hash.end());
     std::string hex_str = picosha2::bytes_to_hex_string(hash.begin(),hash.end());
+    std::cout<< hex_str << std::endl;
     //hashing block data, printing output
     b.hashData();
     std::cout << b.hash << std::endl;
