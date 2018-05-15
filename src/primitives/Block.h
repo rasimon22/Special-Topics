@@ -18,8 +18,9 @@ class SBlock {
         
         std::vector<uint256_t> tx;
         SBlock();
-        SBlock(std::vector<int>& data, int prevHash);
+        SBlock(std::vector<uint256_t>& data, uint256_t prevHash);
         void hashData();
+        void incrementNonce();
 
 };
 
