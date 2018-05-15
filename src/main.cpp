@@ -23,7 +23,6 @@ int main(int argc, char** argv){
     std::cout << (str_to_uint256(hex_str) == b.hash/2) << std::endl;
 
 
-    delete trans;
 
     return 0;
 }
