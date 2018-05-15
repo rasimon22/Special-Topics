@@ -2,3 +2,4 @@
 output
 cmake*
 .idea
+*.swp
