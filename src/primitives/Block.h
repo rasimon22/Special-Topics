@@ -13,10 +13,10 @@ class SBlock {
     public:
         
         uint256_t hash;
-        int prevHash;
+        uint256_t prevHash;
         int nonce;
         
-        std::vector<int> tx;
+        std::vector<uint256_t> tx;
         SBlock();
         SBlock(std::vector<int>& data, int prevHash);
         void hashData();

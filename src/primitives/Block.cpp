@@ -6,11 +6,11 @@ SBlock::SBlock(){
     this->nonce = 0;
 
 }
-SBlock::SBlock(std::vector<int>& data, int prevHash){
+SBlock::SBlock(std::vector<uint256_t>& data, uint256_t prevHash){
     this->hash = 0;
     this->tx = data;
     this->prevHash = prevHash;
-//    this->hashData();
+    this->nonce = 0;
 
     
 }
