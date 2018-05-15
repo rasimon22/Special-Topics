@@ -24,7 +24,7 @@ void SBlock::hashData(){
     hash_comp[3] = std::strtoull(hex_string.substr(0, (int)(64/4)).c_str(), 0, 16); 
     hash_comp[2] = std::strtoull(hex_string.substr((int)(64/4)-1, (int)(64/4)).c_str(), 0, 16);
     hash_comp[1] = std::strtoull(hex_string.substr((int)(64/2)-1, (int)(64/4)).c_str(), 0, 16);
-    hash_comp[0] = std::strtoull(hex_string.substr((int)(64/4)-1, (int)(64/4)).c_str(), 0, 16);
+    hash_comp[0] = std::strtoull(hex_string.substr((int)(3*64/4)-1, (int)(64/4)).c_str(), 0, 16);
     for(int i = 0; i < 4; i++){
         this->hash += uint256_t(hash_comp[i]) << (64*i);
     }
