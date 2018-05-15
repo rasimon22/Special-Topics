@@ -8,6 +8,7 @@ using namespace std;
 #include <sstream>
 #include <cstdlib>
 #include "../../uint256_t/uint256_t.h"
+#include "../util/str-u256.cpp"
 class SBlock {
     public:
         
