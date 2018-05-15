@@ -8,7 +8,7 @@
 #include <string>
 #include "util/str-u256.cpp"
 int main(int argc, char** argv){
-    vector<int> vec;
+    std::vector<int> vec;
     for(int i = 0; i < 100000; i++){
         vec.push_back(rand());
     }
