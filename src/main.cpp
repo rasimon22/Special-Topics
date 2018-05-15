@@ -20,7 +20,7 @@ int main(int argc, char** argv){
     b.hashData();
     std::cout << b.hash << std::endl;
     std::cout << "Integer val for hash of block data" << std::endl;
-    std::cout << (str_to_uint256(hex_str) == b.hash/2) << std::endl;
+    std::cout << (str_to_uint256(hex_str) == b.hash) << std::endl;
 
 
 
