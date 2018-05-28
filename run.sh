@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 #SBATCH -J ring
 #SBATCH --ntasks=30
 #SBATCH --partition=development
@@ -6,6 +6,7 @@
 
 module purge
 module load gcc-6.3 openmpi
-cd src
+#cd src
 make
+src/output
 #mpirun -np ${SLURM_NTASKS} a.out
