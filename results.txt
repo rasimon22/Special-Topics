@@ -1,0 +1,19 @@
+[src/primitives/Node.h:19]: (style) Class 'Node' has a constructor with 1 argument that is not explicit.
+[src/primitives/Node.h:20]: (style) Class 'Node' has a constructor with 1 argument that is not explicit.
+[src/primitives/Chain.cpp:16]: (warning) Member variable 'Chain::chainLength' is not initialized in the constructor.
+[src/primitives/Chain.cpp:28]: (warning) Member variable 'Chain::genBlock' is not assigned a value in 'Chain::operator='.
+[src/primitives/Chain.cpp:28]: (warning) Member variable 'Chain::lastBlock' is not assigned a value in 'Chain::operator='.
+[src/primitives/Chain.cpp:28]: (warning) Member variable 'Chain::chainLength' is not assigned a value in 'Chain::operator='.
+[src/primitives/Chain.cpp:28]: (style) 'operator=' should return reference to 'this' instance.
+[src/primitives/Chain.h:23]: (style) Class 'Chain' has a constructor with 1 argument that is not explicit.
+[src/primitives/Node.cpp:14]: (performance) Variable 'neighborList' is assigned in constructor body. Consider performing initialization in initialization list.
+[src/primitives/Node.cpp:20]: (performance) Variable 'txPool' is assigned in constructor body. Consider performing initialization in initialization list.
+[src/primitives/Node.cpp:27]: (performance) Variable 'txPool' is assigned in constructor body. Consider performing initialization in initialization list.
+[src/primitives/Node.cpp:28]: (performance) Variable 'neighborList' is assigned in constructor body. Consider performing initialization in initialization list.
+[src/primitives/STransaction.cpp:11]: (warning) Member variable 'STransaction::txFee' is not initialized in the constructor.
+[src/primitives/Node.cpp:33]: (style) The function 'addNeighbor' is never used.
+[src/primitives/Block.cpp:37]: (style) The function 'incrementNonce' is never used.
+[src/primitives/Node.cpp:37]: (style) The function 'setTargetTime' is never used.
+[src/primitives/Node.cpp:50]: (style) The function 'setup_for_mining' is never used.
+[src/primitives/Block.cpp:44]: (style) The function 'verifyTransactions' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)
