@@ -13,6 +13,7 @@ namespace primitive {
         unsigned long nTime;
         float amount;
         unsigned int index;
+        double txFee;
     public:
 
         std::string to_string();
@@ -22,6 +23,9 @@ namespace primitive {
         STransaction(uint256_t dest, uint256_t recp, float amt, unsigned int index);
 
         uint256_t hash_transaction();
+        void updateTxFee(double txFee);
+        bool operator < (const primitive::STransaction&);
+        double getTxFee();
     };
 }
 

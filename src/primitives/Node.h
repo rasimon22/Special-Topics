@@ -5,9 +5,9 @@
 #include "STransaction.h"
 #include "../util/str-u256.h"
 #include <vector>
-#include <stdio>
+#include <iostream>
 #include <mpi.h>
-#include <ctime>
+#include <algorithm>
 namespace primitive{
     class Node {
     protected:
@@ -22,6 +22,9 @@ namespace primitive{
         void setTargetTime(double targetTime);
         void addNeighbor(size_t neighborPid);
         void addTransaction(STransaction transaction);
+        std::vector <STransaction>& getTxPool();
+
+        void setup_for_mining();
 
     };
 }

@@ -15,15 +15,21 @@
 #define SPECIAL_TOPICS_CHAIN_H
 namespace primitive {
     class Chain {
-        std::vector<primitive::SBlock> ledger;
+        primitive::SBlock *genBlock;
+        primitive::SBlock *lastBlock;
         size_t chainLength;
     public:
         Chain();
-        void addBlock(primitive::SBlock);
-        std::vector<primitive::SBlock> getLedger();
-        void setLedger(std::vector<primitive::SBlock> ledger);
-        primitive::SBlock getRecentBlock();
-        primitive::SBlock getBlockAtIndex(size_t index);
+        Chain(primitive::SBlock);
+        Chain(primitive::Chain&);
+        ~Chain();
+        Chain& operator= (Chain&);
+        size_t getChainLength();
+
+        void append();
+
+
+
 
 
     };

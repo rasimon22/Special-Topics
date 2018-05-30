@@ -6,8 +6,9 @@ primitive::STransaction::STransaction(){
     this->nTime = time(0);
     this->amount = 0;
     this-> index = 0;
+    this->txFee = 0;
 }
-primitive::STransaction::STransaction(uint256_t dest, uint256_t recp, float amt, unsigned int index){
+primitive::STransaction::STransaction(uint256_t dest, uint256_t recp, float amt, unsigned int index) {
     this->destAddr = dest;
     this->recpAddr = recp;
     this->amount = amt;
@@ -31,4 +32,16 @@ uint256_t primitive::STransaction::hash_transaction() {
     std::string hash_hex_string;
     picosha2::hash256_hex_string(ret, hash_hex_string);
     return util::str_to_uint256(hash_hex_string);
+}
+
+bool primitive::STransaction::operator < (const primitive::STransaction& rhs) {
+    return this->txFee < rhs.txFee;
+}
+
+void primitive::STransaction::updateTxFee(double txFee) {
+    this->txFee = txFee;
+}
+
+double primitive::STransaction::getTxFee() {
+    return this->txFee;
 }
