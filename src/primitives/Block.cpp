@@ -20,6 +20,7 @@ primitive::SBlock::SBlock(std::vector <uint256_t> &data, uint256_t prevHash) {
     //TODO:Refactor hashing to include prev and nonce without adding to tx
 }
 
+
 primitive::SBlock::~SBlock() {
     if (this->nextBlock != nullptr) {
         delete nextBlock;
@@ -49,10 +50,27 @@ bool primitive::SBlock::verifyTransactions() {
     return verified;
 }
 
-void primitive::SBlock::addNext(primitive::SBlock &next) {
-    this->nextBlock = new primitive::SBlock::SBlock(next);
+void primitive::SBlock::addNext(primitive::SBlock *next) {
+    this->nextBlock = next;
 }
 
 primitive::SBlock *primitive::SBlock::getNext() {
     return this->nextBlock;
+}
+
+uint256_t primitive::SBlock::getHash() {
+    return this->hash;
+}
+
+uint256_t primitive::SBlock::getPrevHash() {
+    return this->prevHash;
+}
+
+int primitive::SBlock::getNonce() {
+    return this->nonce;
+
+}
+
+std::vector<uint256_t> primitive::SBlock::getTx(){
+    return this->tx;
 }

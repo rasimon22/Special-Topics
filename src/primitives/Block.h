@@ -16,8 +16,8 @@ namespace primitive {
         uint256_t hash;
         uint256_t prevHash;
         int nonce;
+        std::vector<uint256_t> tx;
         primitive::SBlock *nextBlock;
-        friend void primitive::Chain::append();
 
     public:
 
@@ -37,6 +37,12 @@ namespace primitive {
         void addNext(primitive::SBlock*);
 
         primitive::SBlock* getNext();
+
+        uint256_t getHash();
+        uint256_t getPrevHash();
+        int getNonce();
+        std::vector<uint256_t> getTx();
+
 
     };
 }

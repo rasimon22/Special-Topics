@@ -1,5 +1,5 @@
-output: main.o Block.o STransaction.o str-u256.o 
-	mpiCC main.o Block.o ../uint256_t/uint128_t.cpp ../uint256_t/uint256_t.cpp STransaction.o -o output
+output: main.o Block.o STransaction.o str-u256.o test.o
+	mpiCC main.o Block.o ../uint256_t/uint128_t.cpp ../uint256_t/uint256_t.cpp STransaction.o test.o -o output
 main.o: main.cpp
 	mpiCC -c main.cpp -o main.o
 Block.o: primitives/Block.cpp 
@@ -8,6 +8,8 @@ STransaction.o: primitives/STransaction.cpp
 	mpiCC -c primitives/STransaction.cpp -o STransaction.o
 str-u256.o: util/str-u256.cpp 
 	mpiCC -c util/str-u256.cpp
+test.o: Tests.cpp
+	mpiCC -c Tests.cpp -o test.o
 clean: 
 	rm *.o
 	rm output
