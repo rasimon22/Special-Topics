@@ -23,7 +23,7 @@ primitive::SBlock::SBlock(std::vector <uint256_t> &data, uint256_t prevHash) {
 
 primitive::SBlock::~SBlock() {
     if (this->nextBlock != nullptr) {
-        delete nextBlock;
+//        delete nextBlock;
     }
 }
 

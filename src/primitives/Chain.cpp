@@ -8,7 +8,7 @@ primitive::Chain::Chain() {
     this->lastBlock = nullptr;
     this->chainLength = 0;
 }
-primitive::Chain::Chain(primitive::SBlock in) {
+primitive::Chain::Chain(primitive::SBlock& in) {
    this->genBlock = new primitive::SBlock(in);
    this->lastBlock = genBlock;
    this->chainLength = 1;
@@ -32,6 +32,14 @@ primitive::Chain::~Chain() {
     delete this->genBlock;
     this->genBlock = nullptr;
     this->lastBlock = nullptr;
+}
+
+primitive::SBlock& primitive::Chain::operator[](size_t index) {
+    primitive::SBlock *it = genBlock;
+    for (int i = 0; i < this->chainLength; ++i) {
+        it = it->getNext();
+    }
+    return *it;
 }
 
 

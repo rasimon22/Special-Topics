@@ -20,11 +20,12 @@ namespace primitive {
         size_t chainLength;
     public:
         Chain();
-        Chain(primitive::SBlock);
+        Chain(primitive::SBlock&);
         Chain(primitive::Chain&);
         ~Chain();
         Chain& operator= (Chain&);
         size_t getChainLength();
+        primitive::SBlock&operator[](size_t index);
 
         void append();
 

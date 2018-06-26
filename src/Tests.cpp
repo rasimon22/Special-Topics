@@ -3,6 +3,7 @@
 //
 #include "catch-2.hpp"
 #include "primitives/Block.h"
+#include "primitives/Chain.h"
 #include "../uint256_t/uint256_t.h"
 #include "util/str-u256.h"
 #include <vector>
@@ -60,5 +61,26 @@ TEST_CASE("Test Block", "[block]") {
         REQUIRE(!genericBlock.verifyTransactions());
     }
 
+    SECTION("Add Next") {
+        primitive::SBlock testBlk(dataVec, 100000);
+        genericBlock.addNext(&testBlk);
+        REQUIRE(&testBlk == genericBlock.getNext());
 
+    }
+
+
+}
+
+TEST_CASE("Chain") {
+    primitive::Chain testChain;
+    REQUIRE(testChain.getChainLength() == 0);
+    SECTION("Overloaded Constructor") {
+        std::vector<uint256_t> vec;
+        for(uint256_t i = 0; i < 1000; i++) {
+            vec.push_back(i);
+        }
+        primitive::SBlock genesis(vec, 0);
+        primitive::Chain overloadChain(genesis);
+
+    }
 }
