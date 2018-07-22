@@ -1,7 +1,7 @@
 #ifndef SMU_PRIMITIVES_TRANSACTION_H
 #define SMU_PRIMITIVES_TRANSACTION_H
 
-#include "../../uint256_t/uint256_t.h"
+#include "../../lib/uint256_t/uint256_t.h"
 #include <string>
 #include <time.h>
 #include "picosha2.h"

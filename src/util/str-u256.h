@@ -11,7 +11,7 @@
 #include <iostream>
 #include <sstream>
 #include <cstdlib>
-#include "../../uint256_t/uint256_t.h"
+#include "../../lib/uint256_t/uint256_t.h"
 
 namespace util {
 

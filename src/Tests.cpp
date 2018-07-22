@@ -1,10 +1,10 @@
 //
 // Created by Rick Simon on 6/1/18.
 //
-#include "catch-2.hpp"
+#include "../lib/catch-2.hpp"
 #include "primitives/Block.h"
 #include "primitives/Chain.h"
-#include "../uint256_t/uint256_t.h"
+#include "../lib/uint256_t/uint256_t.h"
 #include "util/str-u256.h"
 #include <vector>
 

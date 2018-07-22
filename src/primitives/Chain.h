@@ -8,7 +8,7 @@
 #include <sstream>
 #include <cstdlib>
 #include "Block.h"
-#include "../../uint256_t/uint256_t.h"
+#include "../../lib/uint256_t/uint256_t.h"
 #include "../util/str-u256.h"
 
 #ifndef SPECIAL_TOPICS_CHAIN_H
