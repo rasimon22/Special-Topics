@@ -6,7 +6,6 @@
 #include "../util/str-u256.h"
 #include <vector>
 #include <iostream>
-#include <mpi.h>
 #include <algorithm>
 namespace primitive{
     class Node {

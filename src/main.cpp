@@ -1,5 +1,4 @@
 #define CATCH_CONFIG_MAIN
-#include <mpi.h>
 #include "primitives/Block.h"
 #include "primitives/STransaction.h"
 #include "primitives/Node.h"
