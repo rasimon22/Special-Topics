@@ -39,7 +39,7 @@ void primitive::SBlock::incrementNonce() {
     this->nonce++;
     this->tx.back() = this->nonce;
     this->hashData();
-    std::cout << this->hash << std::endl;
+    //std::cout << this->hash << std::endl;
 }
 
 bool primitive::SBlock::verifyTransactions() {
