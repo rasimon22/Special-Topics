@@ -13,5 +13,6 @@ test.o: src/Tests.cpp
 chain.o: src/primitives/Chain.cpp
 	g++ -c src/primitives/Chain.cpp -o chain.o
 clean: 
+	@echo "Cleaning..."
 	rm *.o
 	rm output

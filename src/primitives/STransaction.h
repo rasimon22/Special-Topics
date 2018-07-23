@@ -4,7 +4,7 @@
 #include "../../lib/uint256_t/uint256_t.h"
 #include <string>
 #include <time.h>
-#include "picosha2.h"
+#include "../../lib/picosha2.h"
 #include "../util/str-u256.h"
 namespace primitive {
     class STransaction {

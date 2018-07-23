@@ -7,7 +7,7 @@
 
 #include <string>
 #include <vector>
-#include "../primitives/picosha2.h"
+#include "../../lib/picosha2.h"
 #include <iostream>
 #include <sstream>
 #include <cstdlib>

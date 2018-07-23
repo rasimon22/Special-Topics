@@ -3,7 +3,7 @@
 //
 #include <vector>
 #include <string>
-#include "picosha2.h"
+#include "../../lib/picosha2.h"
 #include <iostream>
 #include <sstream>
 #include <cstdlib>
